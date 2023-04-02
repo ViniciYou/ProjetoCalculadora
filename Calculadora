@@ -1,0 +1,1231 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    /* Measurement Converter Project
+First semester students of college of technology:
+         FATEC - Mogi Mirim !!*/
+
+    int opt = 100;  /*main menu*/
+    do {
+        float size = 0; /*sub menu */
+        float res = 0; /*submenu  */
+        int size1 = 100;  /* sub menu size type */
+        int size2 = 100;  /*sub menu size type*/
+        do {
+            printf("Measurement Converter Project.\n\n");          /*MAIN MENU */
+            printf("Choose the measurement type to convert:\n\n");
+            printf("1-Length.\n");
+            printf("2-Mass.\n");
+            printf("3-Pressure.\n");
+            printf("4-Temperature.\n");         /* */
+            printf("5-Velocity.\n");
+            printf("6-Frequency.\n");
+            printf("0-Exit.\n");
+            printf("Enter the number corresponding to one of the options above: ");
+            scanf("%d", &opt);
+            printf("\n");
+            if (opt >= 7 || opt < 0) {
+                printf("Wrong value. Choose a value from 1 to 6 to continue: \n");
+                system("pause");
+            }
+        } while (opt >= 7 || opt < 0);
+        switch (opt) {
+            case 1:                                                    /*LENGTH menu*/
+                do {
+                    while (size1 >= 10 || size1 <= 0) {
+                        printf("You chose LENGTH\n");
+                        printf("1-Kilometer.\n");
+                        printf("2-Meter.\n");
+                        printf("3-Centimeter.\n");
+                        printf("4-Millimeter.\n");
+                        printf("5-Mile.\n");
+                        printf("6-Yard.\n");
+                        printf("7-Foot.\n");
+                        printf("8-Inch.\n");
+                        printf("9-Nautical_Mile.\n");
+                        printf("Choose the measurement you want to convert:\n");
+                        scanf("%d", &size1);
+                        if (size1 >= 10 || size1 <= 0) {
+                            printf("Enter the number corresponding to one of the options above: \n");
+                            system("pause");
+                        }
+                    }
+                    printf("Choose the measurement you want to convert to:\n");
+                    scanf("%d", &size2);
+                    if (size2 >= 10 || size2 <= 0) {
+                        printf("Enter the number corresponding to one of the options above: \n");
+                        system("pause");
+                    }
+                } while (size2 >= 10 || size2 <= 0);
+                if (size1 == 1) {
+                    printf("Enter the measurement in Kilometers: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1000;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 100000;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1000000;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 1.609;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 1094;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size * 3281;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size * 39370;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size / 1.852;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 2) {
+                    printf("Enter the measurement in Meters: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1000;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 100;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1000;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 1609;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 1.094;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size * 3.281;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size * 39.37;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size / 1852;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 3) {
+                    printf("Enter the measurement in Centimeter: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 100000;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 100;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 1;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 10;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 160900;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size / 91.44;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size / 30.48;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size / 2.54;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size / 185200;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 4) {
+                    printf("Enter the measurement in Millimeter: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1000000;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 1000;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size / 10;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 1609000000;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size / 914.4;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size / 304.8;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size / 25.4;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size / 1852000000;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 5) {
+                    printf("Enter the measurement in Miles: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1.609;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1609;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 160900;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 16090000000;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size * 1;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 1760;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size * 5280;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size * 63360;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size / 1.151;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 6) {
+                    printf("Enter the measurement in Yard: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1094;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 1) {
+                        res = size / 1.094;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 91.44;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 914.4;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 1760;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 1;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size * 3;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size * 36;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size / 2025;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 7) {
+                    printf("Enter the measurement in Foot: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 3281;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 1) {
+                        res = size / 3.281;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 30.48;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 304.8;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 5280;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size / 3;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size * 1;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size * 12;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size / 6076;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 8) {
+                    printf("Enter the measurement in Inch: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 39370;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 1) {
+                        res = size / 39.37;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 2.54;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 25.4;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 63360;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size / 36;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size / 12;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size * 1;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size / 72910;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 9) {
+                    printf("Enter the measurement in Nautical Mile.: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1.852;
+                        printf("%.4f Kilometers.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1852;
+                        printf("%.4f Meter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 185200;
+                        printf("%.4f Centimeter.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1.852000000;
+                        printf("%.4f Millimeter.\n", res);
+                        system("pause");
+                    }
+
+                    if (size2 == 5) {
+                        res = size * 1.151;
+                        printf("%.4f Mile.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 2025;
+                        printf("%.4f Yard.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 7) {
+                        res = size * 6076;
+                        printf("%.4f Foot.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 8) {
+                        res = size * 72910;
+                        printf("%.4f Inch.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 9) {
+                        res = size * 1;
+                        printf("%.4f Nautical Mile.\n", res);
+                        system("pause");
+                    }
+                }
+                break;
+            case 2:                                                 /* MASS menu*/
+                do {
+                    while (size1 >= 7 || size1 <= 0) {
+                        printf("You chose Mass.\n");
+                        printf("1-Tonne\n");
+                        printf("2-Kilogram\n");
+                        printf("3-Gramme\n");
+                        printf("4-Milligran\n");
+                        printf("5-Pound\n");
+                        printf("6-Ounce\n");
+                        printf("Choose the measurement you want to convert:\n");
+                        scanf("%d", &size1);
+                        printf("\n");
+                        if (size1 >= 7 || size1 <= 0) {
+                            printf("Enter the number corresponding to one of the options above: \n");
+                            system("pause");
+                        }
+                    }
+                    printf("Choose the measurement you want to convert to:\n");
+                    scanf("%d", &size2);
+                    if (size2 >= 7 || size2 <= 0) {
+                        printf("Enter the number corresponding to one of the options above: \n");
+                        system("pause");
+                    }
+                } while (size2 >= 7 || size2 <= 0);
+                if (size1 == 1) {
+                    printf("Enter the measurement in Tonne: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1;
+                        printf("%.4f Tonne.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1000;
+                        printf("%.4f Kilogram.\n", res);
+                        system("pause");
+                        break;
+                    }
+                    if (size2 == 3) {
+                        res = size * 1000000;
+                        printf("%.4f Grams.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1000000000;
+                        printf("%.4f Milligram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size * 2205;
+                        printf("%.4f Pounds.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 35270;
+                        printf("%.4f Ounce.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 2) {
+                    printf("Enter the measurement in Kilogram: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1000;
+                        printf("%.4f Tonne.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1;
+                        printf("%.4f Kilogram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 1000;
+                        printf("%.4f Grams.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1000000;
+                        printf("%.4f Milligram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size * 2.205;
+                        printf("%.4f Pounds.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 35.274;
+                        printf("%.4f Ounce.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 3) {
+                    printf("Enter the measurement in Gramme: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1000000;
+                        printf("%.4f Tonne.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 1000;
+                        printf("%.4f Kilogram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 1;
+                        printf("%.4f Grams.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1000;
+                        printf("%.4f Milligram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 453.6;
+                        printf("%.4f Pounds.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size / 28.35;
+                        printf("%.4f Ounce.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 4) {
+                    printf("Enter the measurement in Milligram: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1000000000;
+                        printf("%.4f Tonne.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 1000000;
+                        printf("%.4f Kilogram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size / 1000;
+                        printf("%.4f Grams.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1;
+                        printf("%.4f Milligram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 453600;
+                        printf("%.4f Pounds.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size / 28350;
+                        printf("%.4f Ounce.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 5) {
+                    printf("Enter the measurement in Pounds: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 2205;
+                        printf("%.4f Tonne.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 2.205;
+                        printf("%.4f Kilogram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 453.6;
+                        printf("%.4f Grams.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 453600;
+                        printf("%.4f Milligram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size * 1;
+                        printf("%.4f Pounds.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 16;
+                        printf("%.4f Ounce.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 6) {
+                    printf("Enter the measurement in Ounce: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 35270;
+                        printf("%.4f Tonne.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 35.274;
+                        printf("%.4f Kilogram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 28.35;
+                        printf("%.4f Grams.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 28350;
+                        printf("%.4f Milligram.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 16;
+                        printf("%.4f Pounds.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 6) {
+                        res = size * 1;
+                        printf("%.4f Ounce.\n", res);
+                        system("pause");
+                    }
+                }
+                break;
+            case 3:                                               /* PRESSURE menu*/
+                do {
+                    while (size1 >= 5 || size1 <= 0) {
+                        printf("You chose Pressure.\n");
+                        printf("1-Standard Atmosphere\n");
+                        printf("2-Bar\n");
+                        printf("3-Pascal\n");
+                        printf("4-Psi\n");
+                        printf("Choose the measurement you want to convert:\n");
+                        scanf("%d", &size1);
+                        printf("\n");
+                        if (size1 >= 5 || size1 <= 0) {
+                            printf("Enter the number corresponding to one of the options above: \n");
+                            system("pause");
+                        }
+                    }
+                    printf("Choose the measurement you want to convert to:\n");
+                    scanf("%d", &size2);
+                    if (size2 >= 5 || size2 <= 0) {
+                        printf("Enter the number corresponding to one of the options above: \n");
+                        system("pause");
+                    }
+                } while (size2 >= 5 || size2 <= 0);
+                if (size1 == 1) {
+                    printf("Enter the measurement in Standard Atmosphere: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1;
+                        printf("%.4f Standard Atmosphere.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1.013;
+                        printf("%.4f Bar.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 101300;
+                        printf("%.4f Pascal.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 14.696;
+                        printf("%.4f Psi.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 2) {
+                    printf("Enter the measurement in Bar: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1.013;
+                        printf("%.4f Standard Atmosphere.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1;
+                        printf("%.4f Bar.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 100000;
+                        printf("%.4f Pascal.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 14.504;
+                        printf("%.4f Psi.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 3) {
+                    printf("Enter the measurement in Pascal: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 101300;
+                        printf("%.4f Standard Atmosphere.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 100000;
+                        printf("%.4f Bar.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 1;
+                        printf("%.4f Pascal.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size / 6895;
+                        printf("%.4f Psi.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 4) {
+                    printf("Enter the measurement in Psi: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 14.696;
+                        printf("%.4f Standard Atmosphere.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 14.504;
+                        printf("%.4f Bar.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 6895;
+                        printf("%.4f Pascal.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1;
+                        printf("%.4f Psi.\n", res);
+                        system("pause");
+                    }
+                }
+                break;
+            case 4:                                                /*TEMPERATURE menu */
+                do {
+                    while (size1 >= 4 || size1 <= 0) {
+                        printf("You chose Temperature.\n");
+                        printf("1-Degree Celsius.\n");
+                        printf("2-Degree Fahrenheit.\n");
+                        printf("3-Degree Kelvin.\n");
+                        printf("Choose the measurement you want to convert:\n");
+                        scanf("%d", &size1);
+                        printf("\n");
+                        if (size1 >= 4 || size1 <= 0) {
+                            printf("Enter the number corresponding to one of the options above: \n");
+                            system("pause");
+                        }
+                    }
+                    printf("Choose the measurement you want to convert to:\n");
+                    scanf("%d", &size2);
+                    if (size2 >= 4 || size2 <= 0) {
+                        printf("Enter the number corresponding to one of the options above: \n");
+                        system("pause");
+                    }
+                } while (size2 >= 4 || size2 <= 0);
+                if (size1 == 1) {
+                    printf("Enter the measurement in Degree Celsius: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1;
+                        printf("%.4f Degree Celsius.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = (size * 9 / 5) + 32;
+                        printf("%.4f Degree Fahrenheit.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size + 273.15;
+                        printf("%.4f Degree Kelvin.\n", res);
+                        system("pause");
+                    }
+
+                }
+                if (size1 == 2) {
+                    printf("Enter the measurement in Degree Fahrenheit: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1.013;
+                        printf("%.4f Degree Celsius.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1;
+                        printf("%.4f Degree Fahrenheit.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 100000;
+                        printf("%.4f Degree Kelvin.\n", res);
+                        system("pause");
+                    }
+
+                }
+                if (size1 == 3) {
+                    printf("Enter the measurement in Degree Kelvin: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 101300;
+                        printf("%.4f Degree Celsius.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 100000;
+                        printf("%.4f Degree Fahrenheit.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 1;
+                        printf("%.4f Degree Kelvin.\n", res);
+                        system("pause");
+                    }
+
+                }
+                break;
+            case 5:                                                /* VELOCITY menu*/
+                do {
+                    while (size1 >= 6 || size1 <= 0) {
+                        printf("You chose Mass.\n");
+                        printf("1-Mile per hour.\n");
+                        printf("2-Feet per second.\n");
+                        printf("3-Meter per second.\n");
+                        printf("4-Kilometer per hour.\n");
+                        printf("5-Knot.\n");
+                        printf("Choose the measurement you want to convert:\n");
+                        scanf("%d", &size1);
+                        printf("\n");
+                        if (size1 >= 6 || size1 <= 0) {
+                            printf("Enter the number corresponding to one of the options above: \n");
+                            system("pause");
+                        }
+                    }
+                    printf("Choose the measurement you want to convert to:\n");
+                    scanf("%d", &size2);
+                    if (size2 >= 6 || size2 <= 0) {
+                        printf("Enter the number corresponding to one of the options above: \n");
+                        system("pause");
+                    }
+                } while (size2 >= 6 || size2 <= 0);
+                if (size1 == 1) {
+                    printf("Enter the measurement in Mile per hour: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1;
+                        printf("%.4f Mile per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1.467;
+                        printf("%.4f Feet per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size / 2.237;
+                        printf("%.4f Meter per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1.609;
+                        printf("%.4f Kilometer per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 1.151;
+                        printf("%.4f Knot.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 2) {
+                    printf("Enter the measurement in Feet per second: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1.467;
+                        printf("%.4f Mile per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1;
+                        printf("%.4f Feet per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size / 3.281;
+                        printf("%.4f Meter per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1.097;
+                        printf("%.4f Kilometer per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 1.688;
+                        printf("%.4f Knot.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 3) {
+                    printf("Enter the measurement in Meter per second: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 2.237;
+                        printf("%.4f Mile per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 3.281;
+                        printf("%.4f Feet per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 1;
+                        printf("%.4f Meter per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 3.6;
+                        printf("%.4f Kilometer per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size * 1.944;
+                        printf("%.4f Knot.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 4) {
+                    printf("Enter the measurement in Kilometer per hour: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size / 1.609;
+                        printf("%.4f Mile per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 1.097;
+                        printf("%.4f Feet per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size / 3.6;
+                        printf("%.4f Meter per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1;
+                        printf("%.4f Kilometer per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size / 1.852;
+                        printf("%.4f Knot.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 5) {
+                    printf("Enter the measurement in Knot: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1.151;
+                        printf("%.4f Mile per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1.688;
+                        printf("%.4f Feet per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size / 1.944;
+                        printf("%.4f Meter per second.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1.852;
+                        printf("%.4f Kilometer per hour.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 5) {
+                        res = size * 1;
+                        printf("%.4f Knot.\n", res);
+                        system("pause");
+                    }
+                }
+                break;
+            case 6:                                                /* FREQUENCY menu*/
+                do {
+                    while (size1 >= 5 || size1 <= 0) {
+                        printf("You chose Frequency.\n");
+                        printf("1-Hertz.\n");
+                        printf("2-Kilohertz.\n");
+                        printf("3-Megahertz.\n");
+                        printf("4-Gigahertz.\n");
+                        printf("Choose the measurement you want to convert:\n");
+                        scanf("%d", &size1);
+                        printf("\n");
+                        if (size1 >= 5 || size1 <= 0) {
+                            printf("Enter the number corresponding to one of the options above: \n");
+                            system("pause");
+                        }
+                    }
+                    printf("Choose the measurement you want to convert to:\n");
+                    scanf("%d", &size2);
+                    if (size2 >= 5 || size2 <= 0) {
+                        printf("Enter the number corresponding to one of the options above: \n");
+                        system("pause");
+                    }
+                }while (size2 >= 5 || size2 <= 0);
+                if (size1 == 1) {
+                    printf("Enter the measurement in Hertz: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1;
+                        printf("%.4f Hertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 1000;
+                        printf("%.4f Kilohertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size / 1000000;
+                        printf("%.4f Megahertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size / 1000000000;
+                        printf("%.4f Gigahertz.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 2) {
+                    printf("Enter the measurement in Kilohertz: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1000;
+                        printf("%.4f Hertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1;
+                        printf("%.4f Kilohertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size / 1000;
+                        printf("%.4f Megahertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size / 1000000;
+                        printf("%.4f Gigahertz.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 3) {
+                    printf("Enter the measurement in Megahertz: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1000000;
+                        printf("%.4f Hertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size / 1000;
+                        printf("%.4f Kilohertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 1;
+                        printf("%.4f Megahertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size / 1000;
+                        printf("%.4f Gigahertz.\n", res);
+                        system("pause");
+                    }
+                }
+                if (size1 == 4) {
+                    printf("Enter the measurement in Gigahertz: ");
+                    scanf("%f", &size);
+                    if (size2 == 1) {
+                        res = size * 1000000000;
+                        printf("%.4f Hertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 2) {
+                        res = size * 1000000;
+                        printf("%.4f Kilohertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 3) {
+                        res = size * 1000;
+                        printf("%.4f Megahertz.\n", res);
+                        system("pause");
+                    }
+                    if (size2 == 4) {
+                        res = size * 1;
+                        printf("%.4f Gigahertz.\n", res);
+                        system("pause");
+                    }
+                }
+                break;
+        }
+    }while (opt != 0);
+    return 0;
+}
